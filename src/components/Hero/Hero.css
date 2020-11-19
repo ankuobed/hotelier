@@ -1,6 +1,6 @@
 .hero {
     color: white;
-    background: linear-gradient(to bottom, rgb(53, 80, 112, 0.8), rgba(81, 104, 131, 0.8)), url('../../images/appartment.jpg');
+    background: linear-gradient(to bottom, rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../images/appartment.jpg');
     padding: 10px;
     background-size: cover;
     text-align: center;
