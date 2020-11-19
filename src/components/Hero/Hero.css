@@ -1,0 +1,37 @@
+.hero {
+    color: white;
+    background: linear-gradient(to bottom, rgb(53, 80, 112, 0.5), rgba(81, 104, 131, 0.5)), url('../../images/appartment.jpg');
+    padding: 10px;
+    background-size: cover;
+    text-align: center;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -240px;
+}
+
+.hero h1 {
+    margin-bottom: 40px;
+}
+
+.hero > button {
+    background-color: #e56b6f;
+    color: white;
+    border: none; 
+    font-family: montserrat;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 2px;
+    font-size: 17px;
+    outline: none;
+}
+
+.hero span {
+    color: #e56b6f;
+}
+
+.heor > button:hover {
+    background-color: #b56576;
+}

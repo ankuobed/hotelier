@@ -1,0 +1,29 @@
+.navbarCon {
+    padding: 1px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 15px #cccccc;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar h2 {
+    color: #355070;
+}
+
+.navbar__option {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #e56b6f;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
