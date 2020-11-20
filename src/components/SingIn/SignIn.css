@@ -1,0 +1,86 @@
+.signInCon {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signIn {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #f1f5fa;
+    width: 100%;
+}
+
+.signIn .inputCon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f1f5fa;
+    height: fit-content;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.inputCon .MuiSvgIcon-root {
+    color: #e56b6f;
+    margin: 0 15px;
+}
+
+.signIn input {
+    padding: 15px 10px;
+    border: none;
+    font-size: 16px;
+    font-family: montserrat;
+    background-color: transparent;
+    flex: 1;
+    outline: none;
+    border-left: 1px solid lightgray;
+}
+
+.signIn .avatarCon {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+.signIn .MuiAvatar-root {
+    transform: translateY(-55px);
+    padding: 14px;
+    color: #e29093;
+    background-color: white;
+    box-shadow: 1px 1px 20px lightgray;
+}
+
+.signIn > button {
+    background-color: #e56b6f;
+    color: white;
+    border: none; 
+    font-family: montserrat;
+    font-weight: bold;
+    padding: 15px 15px;
+    border-radius: 30px;
+    font-size: 17px;
+    outline: none;
+    width: 100%;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.remember .MuiCheckbox-root {
+    color: #b56576;
+}
+
+@media(min-width: 600px) {
+    .signIn {
+        width: 400px;
+    }
+}
