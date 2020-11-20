@@ -6,9 +6,11 @@ const Navbar = () => {
     return (
         <div className='navbarCon'>
             <div className='navbar container'>
-                <h2>Hotelier</h2>
+                <Link className='logo' to='/'>
+                    <h2>Hotelier</h2>
+                </Link>
                 <div className='navbar__options'>
-                    <Link to='/login' className='navbar__option'>Sign in</Link>
+                    <Link to='/signIn' className='navbar__option'>Sign in</Link>
                 </div>
             </div>
         </div>

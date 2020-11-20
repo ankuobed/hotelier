@@ -1,16 +1,49 @@
 import React, { useState } from 'react'
+import { CircularProgress } from '@material-ui/core'
+import { Error } from '@material-ui/icons'
+import axios from 'axios'
 import './SignUp.css'
 
 const SignUp = () => {
-    const [fullName, setFullName] = useState('')
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [roomType, setRoomType] = useState('Eos ut elitr eirmod amet')
-    const [arrival, setArrival] = useState('')
-    const [departure, setDeparture] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirm, setConfirm] = useState('')
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
+
+    const clearFields = () => {
+        setName('')
+        setEmail('')
+        setPhone('')
+        setRoomType('')
+        setPassword('')
+        setConfirm('')
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setLoading(true)
+        axios.post('http://localhost:5000/user', { 
+            name,
+            email,
+            phone,
+            roomType,
+            password,
+            confirm
+        })
+        .then(res => {
+            setLoading(false)
+            setError('')
+            clearFields()
+            console.log(res.data)
+        })
+        .catch(err => {
+            setLoading(false)
+            setError(err.response.data)
+        })
     }
    
 
@@ -18,11 +51,11 @@ const SignUp = () => {
         <form onSubmit={handleSubmit} className='signUp'>
             <h2>Book your stay now</h2>
             <div className='inputCon'>
-                <label>Full Name</label>
+                <label>Name</label>
                 <input
                     type='text'
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder='John Doe'
                 />
             </div>
@@ -58,25 +91,26 @@ const SignUp = () => {
             </div>
 
             <div className='inputCon'>
-                <label>Arrival</label>
+                <label>Password</label>
                 <input
-                    type='date'
-                    value={arrival}
-                    onChange={(e) => setArrival(e.target.value)}
+                    type='password'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
 
             <div className='inputCon'>
-                <label>Departure</label>
+                <label>Confirm Password</label>
                 <input
-                    type='date'
-                    value={departure}
-                    onChange={(e) => setDeparture(e.target.value)}
+                    type='password'
+                    value={confirm}
+                    onChange={(e) => setConfirm(e.target.value)}
                 />
             </div>
 
-            <button>SUMBIT</button>
+            { error&& <p className='error'><Error />{error}</p>}
 
+            <button>{loading? <CircularProgress color='inherit' size={20} /> : 'SUBMIT'}</button>
         </form>
     )
 }

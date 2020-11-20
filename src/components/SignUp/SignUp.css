@@ -3,13 +3,13 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgb(53, 80, 112, 0.4);
     border-radius: 5px;
     padding: 30px;
 }
 
 .signUp h2 {
-    color: #355070;
+    color: white;
     text-align: left;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .signUp label {
-    color: #355070;
+    color: white;
     text-align: left;
     margin-bottom: 5px;
 }
@@ -37,7 +37,20 @@
     background-color: white;
 }
 
-.signUp > button {
+.error {
+    color: #ec8e91;
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+    font-size: 15px;
+}
+
+.error .MuiSvgIcon-root {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.signUp button {
     background-color: #e56b6f;
     color: white;
     border: none; 
@@ -47,9 +60,10 @@
     border-radius: 5px;
     font-size: 17px;
     outline: none;
+    height: 40px;
 }
 
-.signUp > button:hover {
+.signUp button:hover {
     background-color: #dd454a;
 }
 
