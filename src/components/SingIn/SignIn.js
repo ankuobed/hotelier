@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Avatar, Checkbox } from '@material-ui/core'
+import { Checkbox } from '@material-ui/core'
 import { EmailOutlined, VpnKeyOutlined } from '@material-ui/icons'
 import './SignIn.css'
 
@@ -19,11 +19,7 @@ const SignIn = () => {
     return (
         <div className='signInCon container'>
             <form onSubmit={handleSubmit} className='signIn'>
-
-                <div className='avatarCon'>
-                    <Avatar />
-                </div>
-
+                <h2>Sign In</h2>
                 <div className='inputCon'>
                     <EmailOutlined />
                     <input 
