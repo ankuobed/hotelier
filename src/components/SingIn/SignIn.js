@@ -26,8 +26,7 @@ const SignIn = () => {
                         type='email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder='Email'
-                        autoFocus
+                        placeholder='email'
                     />
                 </div>
 

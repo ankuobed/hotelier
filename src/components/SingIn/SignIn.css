@@ -3,14 +3,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 30px;
 }
 
 .signIn {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-color: white;
     width: 100%;
+    background-color: white;
+    padding: 15px;
 }
 
 .signIn h2 {
@@ -26,16 +28,16 @@
     background-color: #f1f5fa;
     height: fit-content;
     border-radius: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .inputCon .MuiSvgIcon-root {
-    color: #e56b6f;
+    color: gray;
     margin: 0 15px;
 }
 
 .signIn input {
-    padding: 15px 10px;
+    padding: 13px 10px;
     border: none;
     font-size: 16px;
     font-family: montserrat;
@@ -51,7 +53,7 @@
     border: none; 
     font-family: montserrat;
     font-weight: bold;
-    padding: 15px 15px;
+    padding: 13px 15px;
     border-radius: 30px;
     font-size: 17px;
     outline: none;
