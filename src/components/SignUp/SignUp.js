@@ -42,7 +42,12 @@ const SignUp = () => {
         })
         .catch(err => {
             setLoading(false)
-            setError(err.response.data)
+            if(!err.response) {
+                setError('network too slow or unavailable')
+            } else {
+                setError(err.response.data)
+            }
+            
         })
     }
    

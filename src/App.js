@@ -10,10 +10,14 @@ import SignIn from './components/SingIn/SignIn'
 function App() {
   return (
     <Router>
-      <Navbar />
       <Switch>
-        <Route path='/signIn' component={SignIn} />
-        <Route path='/' component={Home} />
+        <Route path='/signIn'>
+          <SignIn />
+        </Route>
+        <Route path='/'>
+          <Navbar />
+          <Home />
+        </Route>
       </Switch>
     </Router>
   )

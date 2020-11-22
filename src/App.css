@@ -1,16 +1,30 @@
 body {
   margin: 0;
   font-family: montserrat;
-  background-color: #e0e0e0;
 }
 
 .container {
   margin: 0 5%;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 @font-face {
   font-family: montserrat;
   src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: precious;
+  src: url('./fonts/Precious.ttf');
+}
+
+@font-face {
+  font-family: adine;
+  src: url('./fonts/Adine\ Kirnberg.ttf');
 }
 
 @media(min-width: 600px) {

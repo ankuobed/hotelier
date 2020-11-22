@@ -1,0 +1,71 @@
+[33mcommit d260e98c4885a99c2b5627cdffe9e3f7bda45a6d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Sat Nov 21 17:14:10 2020 +0000
+
+    clean up
+
+[33mcommit 3331603b5afb417e0b858c5aeb764acc9c8ba6e9[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Fri Nov 20 20:54:51 2020 +0000
+
+    clean up
+
+[33mcommit d864d91021b42f7f263e62f523ab984538ba7a13[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Fri Nov 20 20:39:39 2020 +0000
+
+    add sign in page
+
+[33mcommit a5699ef6c4f935518bac3fe845f08e9b31c2cf85[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Fri Nov 20 20:34:21 2020 +0000
+
+    added login page
+
+[33mcommit ed228f63349145d1dff77ad51eaf9de461b898b8[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 17:52:22 2020 +0000
+
+    changed hero overlay color
+
+[33mcommit 4e7d8ec5f35b955bcb507a31f1f747e9e4bbe44b[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 17:44:45 2020 +0000
+
+    clean up
+
+[33mcommit 1d83fed45856928cfe815951fc23a658159c4794[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 17:40:58 2020 +0000
+
+    clean up:
+
+[33mcommit 0abf89822e33035a3711f141e05cb65e64925238[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 17:37:28 2020 +0000
+
+    clean up
+
+[33mcommit 283db923e66447c72d325850c39cb1e680764543[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 17:35:03 2020 +0000
+
+    removed backdrop-filter
+
+[33mcommit fa3dc7aa45818c84bc9c4d4c4db01f7480736439[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 17:19:44 2020 +0000
+
+    fixed backdrop-filter bug
+
+[33mcommit 229182411ef58220a9e11e280709444c6560ec87[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Thu Nov 19 16:59:04 2020 +0000
+
+    first commit
+
+[33mcommit a8d2930713a6368a4d0c164249051f65f4dc16c6[m
+Author: Obed Anku <ankuobed@gmail.com>
+Date:   Wed Nov 18 18:25:50 2020 +0000
+
+    Initialize project using Create React App

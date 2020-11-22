@@ -1,9 +1,8 @@
 .signInCon {
-    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
+    flex-direction: column;
 }
 
 .signIn {
@@ -12,13 +11,19 @@
     border-radius: 10px;
     width: 100%;
     background-color: white;
-    padding: 15px;
+    padding: 15px 0;
+    margin-top: 12%;
 }
 
 .signIn h2 {
-    text-align: center;
     margin-bottom: 30px;
     color: #355070;
+}
+
+.signIn h2 span {
+    font-family: adine;
+    font-size: 45px;
+    letter-spacing: 3px;
 }
 
 .signIn .inputCon {
@@ -67,8 +72,13 @@
     margin-top: 10px;
 }
 
+.signInCon p {
+    text-align: center;
+    font-size: 14px;
+}
+
 .remember .MuiCheckbox-root {
-    color: #b56576;
+    color: #e56b6f;
 }
 
 @media(min-width: 600px) {

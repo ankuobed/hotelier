@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Checkbox } from '@material-ui/core'
 import { EmailOutlined, VpnKeyOutlined } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 import './SignIn.css'
 
 const SignIn = () => {
@@ -19,7 +20,7 @@ const SignIn = () => {
     return (
         <div className='signInCon container'>
             <form onSubmit={handleSubmit} className='signIn'>
-                <h2>Sign In</h2>
+                <h2>Sign in to <span><Link className='link' to='/'>Hotelier</Link></span></h2>
                 <div className='inputCon'>
                     <EmailOutlined />
                     <input 
@@ -50,7 +51,10 @@ const SignIn = () => {
                     />
                     <label>Remember me</label>
                 </div>
+
             </form>
+
+            <p>Not a member? <Link to='/'>Sign up now</Link></p>
         </div>
     )
 }

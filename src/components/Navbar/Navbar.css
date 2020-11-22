@@ -18,7 +18,9 @@
 
 .logo {
     color: #355070;
-    text-decoration: none;
+    font-family: adine;
+    font-size: 35px;
+    letter-spacing: 3px;
 }
 
 .navbar__option {
