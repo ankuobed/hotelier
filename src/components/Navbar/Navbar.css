@@ -31,3 +31,46 @@
     padding: 7px 15px;
     border-radius: 5px;
 }
+
+.navbar__username {
+    font-weight: bold;
+    color: #355070;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__username .MuiSvgIcon-root {
+    color: #e56b6f;
+    font-size: 17px;
+    transform: rotate(90deg);
+}
+
+.navbar .logout {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #e56b6f;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    display: none;
+    margin-left: 15px;
+}
+
+.MuiPopover-paper {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+@media(min-width: 600px) {
+    .navbar__username .MuiSvgIcon-root {
+        display: none;
+    }
+
+    .navbar .logout {
+        display: block;
+    }
+}

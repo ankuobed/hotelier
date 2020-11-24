@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import { CircularProgress } from '@material-ui/core'
 import { Error } from '@material-ui/icons'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
+import { useStateValue } from '../../StateContext'
 import './SignUp.css'
 
 const SignUp = () => {
+    const [, dispatch] = useStateValue()
+
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -13,6 +17,8 @@ const SignUp = () => {
     const [confirm, setConfirm] = useState('')
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+
+    const history = useHistory()
 
     const clearFields = () => {
         setName('')
@@ -34,11 +40,12 @@ const SignUp = () => {
             password,
             confirm
         })
-        .then(res => {
+        .then(({data}) => {
             setLoading(false)
             setError('')
             clearFields()
-            console.log(res.data)
+            dispatch({ type: 'SET_USER', user: data})
+            history.push('/user')
         })
         .catch(err => {
             setLoading(false)
@@ -61,7 +68,7 @@ const SignUp = () => {
                     type='text'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder='John Doe'
+                    placeholder='e.g. John Doe'
                 />
             </div>
 
@@ -71,7 +78,7 @@ const SignUp = () => {
                     type='email'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder='john@example.com'
+                    placeholder='e.g. john@example.com'
                 />
             </div>
 
