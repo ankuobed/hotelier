@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
-import './Navbar.css'
 import { Link, useHistory } from 'react-router-dom'
 import { useStateValue } from '../../StateContext'
 import { ArrowForwardIos } from '@material-ui/icons'
 import { IconButton, Popover } from '@material-ui/core'
 
+import './Navbar.css'
+
 const Navbar = ({ onUserPage }) => {
-    const [{ user }, dispatch] = useStateValue()
+    const [{ username }, dispatch] = useStateValue()
     const [open, setOpen] = useState(false)
     const history = useHistory()
 
     const handleLogOut = () => {
         dispatch({ type: 'DELETE_USER'})
-        window.localStorage.removeItem('hotelierUser')
+        document.cookie = 'hotelierUser=;'
         history.push('/signIn')
     }
 
@@ -24,7 +25,7 @@ const Navbar = ({ onUserPage }) => {
                 </Link>
                 
                 {
-                    onUserPage? <p className='navbar__username'>{user?.name?.split(' ')[0]} 
+                    onUserPage? <p className='navbar__username'>{username?.split(' ')[0]} 
                     <button className='logout' onClick={handleLogOut}>Log out</button>
                     <IconButton onClick={() => setOpen(true)} ><ArrowForwardIos /></IconButton></p> :
                     <div className='navbar__options'>

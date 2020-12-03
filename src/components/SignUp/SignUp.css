@@ -41,7 +41,7 @@
     background-color: white;
 }
 
-.error {
+.signUp .error {
     color: #ec8e91;
     display: flex;
     align-items: center;

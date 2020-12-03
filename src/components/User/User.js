@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
-import './User.css'
-import { useStateValue } from '../../StateContext'
 import { useHistory } from 'react-router-dom'
+import { useStateValue } from '../../StateContext'
+import './User.css'
 
 const User = () => {
-    const [{ user }] = useStateValue()
+    const [{ username }] = useStateValue()
     const history = useHistory()
 
     useEffect(() => {
         document.title = 'User'
-        if(!user) {
+        if(!username) {
             history.push('/')
         }
     })

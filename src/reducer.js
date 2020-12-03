@@ -1,5 +1,5 @@
 export const initialState = {
-    user: {}
+    username: ''
 }
 
 export default function reducer(state, action) {
@@ -7,12 +7,12 @@ export default function reducer(state, action) {
         case 'SET_USER':
             return {
                 ...state,
-                user: action.user
+               username: action.username
             }
         case 'DELETE_USER':
             return {
                 ...state,
-                user: null
+                username: ''
             }
         default:
             return state

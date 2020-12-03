@@ -37,8 +37,8 @@
 }
 
 .inputCon .MuiSvgIcon-root {
-    color: gray;
-    margin: 0 15px;
+    color: #e56b6f;
+    margin-left: 15px;
 }
 
 .signIn input {
@@ -49,14 +49,14 @@
     background-color: transparent;
     flex: 1;
     outline: none;
-    border-left: 1px solid lightgray;
 }
 
-.singIn .error {
-    color: orangered;
+.signIn .error {
+    color: red;
     display: flex;
     align-items: center;
     margin-top: -2px;
+    margin-left: 10px;
     font-size: 15px;
 }
 

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Checkbox, CircularProgress } from '@material-ui/core'
-import { EmailOutlined, VpnKeyOutlined, Error } from '@material-ui/icons'
+import { PersonOutline, LockOutlined, Error } from '@material-ui/icons'
 import { Link, useHistory } from 'react-router-dom'
 import axios from 'axios'
+
+import { getCookie } from '../../utils'
 import { useStateValue } from '../../StateContext'
 import './SignIn.css'
 
@@ -12,20 +14,20 @@ const SignIn = () => {
 
     useEffect(() => {
         document.title = 'Hostel'
-        if(window.localStorage.getItem('hotelierUser')) {
+        if(getCookie('hotelierUser')) {
             dispatch({ 
                 type: 'SET_USER', 
-                user: JSON.parse(window.localStorage.getItem('hotelierUser')) 
+                username: getCookie('hotelierUser') 
             })
             history.push('/user')
         }
-    }, [])
+    })
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
-    const [remember, setRemember] = useState(false)
+    const [remember, setRemember] = useState(true)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -35,9 +37,11 @@ const SignIn = () => {
             setLoading(false)
             setError('')
             
-            dispatch({ type: 'SET_USER', user: data})
+            dispatch({ type: 'SET_USER', username: data.name})
             if(remember) {
-                window.localStorage.setItem('hotelierUser', JSON.stringify(data))
+                // setting the cookie date to one year
+                const cookieDate = new Date().setFullYear() + 1 
+                document.cookie = `hotelierUser=${data.name}; expires=${cookieDate}; path=/`
             }
             history.push('./user')
         })
@@ -56,7 +60,7 @@ const SignIn = () => {
             <form onSubmit={handleSubmit} className='signIn'>
                 <h2>Sign in to <span><Link className='link' to='/'>Hotelier</Link></span></h2>
                 <div className='inputCon'>
-                    <EmailOutlined />
+                    <PersonOutline />
                     <input 
                         type='email'
                         value={email}
@@ -67,7 +71,7 @@ const SignIn = () => {
                 </div>
 
                 <div className='inputCon'>
-                    <VpnKeyOutlined />
+                    <LockOutlined />
                     <input 
                         type='password'
                         value={password}
@@ -84,6 +88,7 @@ const SignIn = () => {
                     <Checkbox
                         checked={remember}
                         onChange={() => setRemember(!remember)}
+                        color='default'
                     />
                     <label>Remember me</label>
                 </div>
